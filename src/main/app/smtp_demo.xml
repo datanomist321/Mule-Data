@@ -14,5 +14,6 @@ http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smt
         <http:listener config-ref="HTTP_Listener_Configuration" path="/*" doc:name="HTTP"/>
         <set-payload value="Hi Welcome" doc:name="Set Payload"/>
         <smtp:outbound-endpoint host="smtp.gmail.com" port="587" user="shaik.ahmed@kelltontech.com" password="iamahmed2" connector-ref="Gmail" to="ahmed.shaik0327@gmail.com" from="ahmed.shaik327@gmail.com" subject="Sub" responseTimeout="10000" doc:name="SMTP"/>
+        <logger level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
